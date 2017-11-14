@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kRj-zW-ibe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kRj-zW-ibe">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,10 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="lHh-se-gRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1L9-VZ-HOk">
+                                <rect key="frame" x="137" y="356" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1L9-VZ-HOk" secondAttribute="height" multiplier="1:1" id="Gs9-og-ZCg"/>
+                                    <constraint firstAttribute="width" constant="100" id="cza-pQ-SAq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1L9-VZ-HOk" firstAttribute="centerY" secondItem="lHh-se-gRx" secondAttribute="centerY" id="2WG-KZ-llA"/>
+                            <constraint firstItem="1L9-VZ-HOk" firstAttribute="centerX" secondItem="lHh-se-gRx" secondAttribute="centerX" id="2qL-F9-kpf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2uC-PP-yUe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Color" id="W1l-Ol-ZCV" userLabel="Color"/>
+                    <connections>
+                        <outlet property="animatedView" destination="1L9-VZ-HOk" id="pVt-eV-SwV"/>
+                        <outlet property="centerVerticalConstraint" destination="2WG-KZ-llA" id="gEf-b5-0Tg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kX3-7l-54M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,6 +60,22 @@
             </objects>
             <point key="canvasLocation" x="684" y="1326"/>
         </scene>
+        <!--Animator-->
+        <scene sceneID="84h-Gz-GGg">
+            <objects>
+                <viewController id="nV9-lS-ylN" customClass="AnimatorViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rpJ-MH-ZcH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lcj-sy-2Ws"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animator" id="eEv-81-eOA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VY5-Q7-pbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="2084"/>
+        </scene>
         <!--Fade-->
         <scene sceneID="Bbp-O6-dlm">
             <objects>
@@ -49,10 +84,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mansnothot" translatesAutoresizingMaskIntoConstraints="NO" id="kwD-at-b6G">
-                                <rect key="frame" x="80" y="190" width="214" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo5-DN-SCr" customClass="RoundButton" customModule="AnimationDemo" customModuleProvider="target">
                                 <rect key="frame" x="94" y="526" width="187" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,6 +112,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mansnothot" translatesAutoresizingMaskIntoConstraints="NO" id="kwD-at-b6G">
+                                <rect key="frame" x="87" y="192" width="200" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="c8s-YS-LHV"/>
@@ -108,6 +143,7 @@
                         <segue destination="Ojl-eI-7PK" kind="relationship" relationship="viewControllers" id="Jey-Yp-Pe8"/>
                         <segue destination="97v-Yq-Pah" kind="relationship" relationship="viewControllers" id="GId-qq-gew"/>
                         <segue destination="H2S-E3-mhk" kind="relationship" relationship="viewControllers" id="Qmg-3N-MGH"/>
+                        <segue destination="nV9-lS-ylN" kind="relationship" relationship="viewControllers" id="7fw-g8-8Ex"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9d-xD-DQK" userLabel="First Responder" sceneMemberID="firstResponder"/>

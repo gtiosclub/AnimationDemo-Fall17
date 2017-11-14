@@ -9,12 +9,14 @@
 import UIKit
 
 class ColorViewController: UIViewController {
-
+    @IBOutlet weak var animatedView: UIView!
+    @IBOutlet weak var centerVerticalConstraint: NSLayoutConstraint!
+    
+    var up:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ColorViewController.didTap(recognizer:)))
-        self.view.addGestureRecognizer(gestureRecognizer)
-        
+        animatedView.backgroundColor = UIColor.random()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +24,32 @@ class ColorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc func didTap(recognizer:UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.2, animations: {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.backgroundColor = UIColor.random()
+            self.animatedView.backgroundColor = UIColor.random()
+            self.up = !self.up
+            if self.up {
+                self.centerVerticalConstraint.constant = -50
+                self.animatedView.transform = CGAffineTransform(rotationAngle: CGFloat.pi).scaledBy(x: 2, y: 2)
+            } else {
+                self.centerVerticalConstraint.constant = 50
+                self.animatedView.transform = CGAffineTransform(rotationAngle: 0).scaledBy(x: 0.5, y: 0.5)
+            }
+            self.view.layoutIfNeeded()
         })
-        
-        createAndAnimate()
     }
     
+    
+    
+    
+    
+    //NOT DOING THIS
     //ONLY IF WE HAVE TIME
     func createAndAnimate() {
         //create
-        let view = UIView(frame: CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height:100))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height:100))
+        view.center = self.view.center
         view.alpha = 0
         view.transform = view.transform.scaledBy(x: 0.25, y: 0.25)
         view.backgroundColor = UIColor.random()
