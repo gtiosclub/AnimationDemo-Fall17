@@ -38,18 +38,4 @@ class FadeViewController: UIViewController {
             }
         })
     }
-    
-    
-    func fadeIn() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.imageView.alpha = 1
-        })
-    }
-    
-    func fadeInWithRunningAnimator() {
-        let animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.imageView.alpha = 1
-        }, completion: nil)
-    }
-    
 }

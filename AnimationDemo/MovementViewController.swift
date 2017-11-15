@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+//DECIDED TO SCRAP THIS
 class MovementViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OO-eS-rgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="1326"/>
+            <point key="canvasLocation" x="684" y="1983"/>
         </scene>
         <!--Animator-->
         <scene sceneID="84h-Gz-GGg">
@@ -74,7 +74,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VY5-Q7-pbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="2084"/>
+            <point key="canvasLocation" x="684" y="1270"/>
+        </scene>
+        <!--Fractional-->
+        <scene sceneID="SBs-tt-GYv">
+            <objects>
+                <viewController id="uwy-nM-Nl6" customClass="FractionalViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dys-9R-daI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dhL-fB-QPe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fractional" id="kxX-Jq-c71"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="win-Lm-ZSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="2721"/>
         </scene>
         <!--Fade-->
         <scene sceneID="Bbp-O6-dlm">
@@ -142,8 +158,9 @@
                     <connections>
                         <segue destination="Ojl-eI-7PK" kind="relationship" relationship="viewControllers" id="Jey-Yp-Pe8"/>
                         <segue destination="97v-Yq-Pah" kind="relationship" relationship="viewControllers" id="GId-qq-gew"/>
-                        <segue destination="H2S-E3-mhk" kind="relationship" relationship="viewControllers" id="Qmg-3N-MGH"/>
                         <segue destination="nV9-lS-ylN" kind="relationship" relationship="viewControllers" id="7fw-g8-8Ex"/>
+                        <segue destination="H2S-E3-mhk" kind="relationship" relationship="viewControllers" id="f6l-tV-erf"/>
+                        <segue destination="uwy-nM-Nl6" kind="relationship" relationship="viewControllers" id="ust-bR-ZfC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9d-xD-DQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
