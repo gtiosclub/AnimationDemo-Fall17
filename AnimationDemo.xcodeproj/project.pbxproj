@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DF07B1A01FBA85D800778606 /* AnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF07B19F1FBA85D800778606 /* AnimatorViewController.swift */; };
-		DF07B1A41FBBA05D00778606 /* FractionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF07B1A31FBBA05D00778606 /* FractionalViewController.swift */; };
 		DF35FDE71FB8F48000FE2316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FDE61FB8F48000FE2316 /* AppDelegate.swift */; };
 		DF35FDEC1FB8F48000FE2316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF35FDEA1FB8F48000FE2316 /* Main.storyboard */; };
 		DF35FDEE1FB8F48000FE2316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF35FDED1FB8F48000FE2316 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		DF07B19F1FBA85D800778606 /* AnimatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorViewController.swift; sourceTree = "<group>"; };
-		DF07B1A31FBBA05D00778606 /* FractionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionalViewController.swift; sourceTree = "<group>"; };
 		DF35FDE31FB8F48000FE2316 /* AnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35FDE61FB8F48000FE2316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF35FDEB1FB8F48000FE2316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				DF35FDFC1FB8F50900FE2316 /* MovementViewController.swift */,
 				DF35FDFE1FB8F5C400FE2316 /* RoundButton.swift */,
 				DF07B19F1FBA85D800778606 /* AnimatorViewController.swift */,
-				DF07B1A31FBBA05D00778606 /* FractionalViewController.swift */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -153,7 +150,6 @@
 			files = (
 				DF35FDF91FB8F4F300FE2316 /* FadeViewController.swift in Sources */,
 				DF35FDFF1FB8F5C400FE2316 /* RoundButton.swift in Sources */,
-				DF07B1A41FBBA05D00778606 /* FractionalViewController.swift in Sources */,
 				DF35FDFD1FB8F50900FE2316 /* MovementViewController.swift in Sources */,
 				DF07B1A01FBA85D800778606 /* AnimatorViewController.swift in Sources */,
 				DF35FDFB1FB8F50000FE2316 /* ColorViewController.swift in Sources */,
